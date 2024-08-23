@@ -1,0 +1,133 @@
+$max-width: calc(1920px - 135px - 105px);
+.partners {
+  padding-top: 100px;
+}
+.partners-container {
+  max-width: $max-width;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.partners-title {
+  color: rgba(160, 0, 48, 0.3);
+  font-family: Inter;
+  font-size: clamp(55px, 7.9vw, 150px);
+  font-weight: 600;
+  line-height: clamp(30px, 5.9vw, 110px);
+  letter-spacing: 0%;
+  text-align: right;
+  margin-bottom: clamp(40px, 4vw, 80px);
+  @media (max-width: 371px) {
+    font-size: clamp(35px, 7.9vw, 55px);
+  }
+}
+.partners-img {
+  position: relative;
+  .partners-img__container {
+    max-width: 1561px;
+    margin: 0 auto;
+  }
+}
+.partners-img__bg {
+  width: 100%;
+  max-width: 1606px;
+}
+.partners-img__list {
+  max-height: 400px;
+}
+.partners-img__coin-market-cap {
+  position: absolute;
+  top: 81px;
+  left: 4.6%;
+  width: clamp(100px, 11.4vw, 219px);
+}
+.partners-img__coin-gecko {
+  position: absolute;
+  top: 24px;
+  left: 35.4%;
+  width: clamp(120px, 10.8vw, 207px);
+}
+.partners-img__mexc-global {
+  position: absolute;
+  top: 55px;
+  right: 7.1%;
+  width: clamp(150px, 15vw, 288px);
+}
+.partners-img__binance {
+  position: absolute;
+  top: 214px;
+  left: 42%;
+  width: clamp(100px, 10.8vw, 208px);
+}
+.partners-img__certik {
+  position: absolute;
+  top: 306px;
+  right: 26.1%;
+  width: clamp(100px, 9vw, 175px);
+}
+.partners-img__wallet-connect {
+  position: absolute;
+  top: 380px;
+  left: 23.3%;
+  width: clamp(150px, 12vw, 232px);
+}
+.partners-img__kucoin {
+  position: absolute;
+  top: 400px;
+  right: 4.7%;
+  width: clamp(100px, 10vw, 198px);
+}
+.partners-img__okx {
+  position: absolute;
+  top: 266px;
+  left: 1.7%;
+  width: clamp(50px, 6vw, 114px);
+}
+@media (max-width: 1300px) {
+  .partners-img__bg {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 1110px) {
+  .partners-img__bg {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 1050px) {
+  .partners-img__bg {
+    display: none;
+  }
+  .partners-img__list {
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 570px) {
+  .partners-img__binance,
+  .partners-img__certik,
+  .partners-img__coin-gecko,
+  .partners-img__coin-market-cap,
+  .partners-img__kucoin,
+  .partners-img__mexc-global,
+  .partners-img__okx,
+  .partners-img__wallet-connect {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .partners-img__list {
+    max-width: 540px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 40px 40px;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+  }
+}
+@media (max-width: 370px) {
+  .partners-img__list {
+    display: flex;
+  }
+}

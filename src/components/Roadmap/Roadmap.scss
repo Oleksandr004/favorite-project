@@ -1,0 +1,30 @@
+$max-width: calc(1920px - 135px - 105px);
+.roadmap {
+  padding-top: 100px;
+}
+.roadmap__container {
+  max-width: $max-width;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.strategy {
+  color: #fff;
+  font-family: Inter;
+  font-size: clamp(20px, 1.6vw, 30px);
+  font-weight: 600;
+  line-height: clamp(14px, 1.6vw, 30px);
+  text-align: right;
+  margin-bottom: 10px;
+}
+.roadmap-title {
+  color: rgba(160, 0, 48, 0.3);
+  font-family: Inter;
+  font-size: clamp(55px, 7.9vw, 150px);
+  font-weight: 600;
+  line-height: clamp(30px, 5.9vw, 110px);
+  text-align: right;
+  margin-bottom: clamp(30px, 4vw, 80px);
+}
+.roadmap-img {
+  width: 100%;
+}

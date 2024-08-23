@@ -1,0 +1,26 @@
+$max-width: calc(1920px - 135px - 105px);
+.tokens-purchased {
+  position: relative;
+  padding-top: clamp(100px, 18vw, 356px);
+}
+.tokens-purchased__container {
+  max-width: $max-width;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.tokens-purchased__title {
+  color: rgba(160, 0, 48, 0.3);
+  font-family: Inter;
+  font-size: clamp(35px, 8vw, 150px);
+  font-weight: 600;
+  line-height: 110px;
+  letter-spacing: 0%;
+  margin-bottom: 80px;
+  margin-bottom: clamp(40px, 4vw, 80px);
+  @media (max-width: 340px) {
+    font-size: clamp(20px, 2vw, 35px);
+  }
+}
+.tokens-purchased__img {
+  width: 100%;
+}

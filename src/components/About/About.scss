@@ -1,0 +1,103 @@
+$max-width: calc(1920px - 135px - 105px);
+
+.about {
+	padding-top: clamp(40px, 5vw, 100px);
+}
+.about__container {
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.about__title {
+	color: rgba(160, 0, 48, 0.3);
+	font-family: Inter;
+	font-size: clamp(75px, 7.9vw, 150px);
+	font-weight: 600;
+	line-height: clamp(30px, 5.9vw, 110px);
+	margin-bottom: clamp(40px, 4.5vw, 80px);
+	@media (max-width: 357px) {
+		font-size: clamp(45px, 4vw, 75px);
+	}
+}
+.about__row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: clamp(15px, 2vw, 40px);
+	flex-wrap: wrap;
+	@media (max-width: 1083px) {
+		max-width: 511px;
+		margin: 0 auto;
+		margin-bottom: clamp(40px, 28vw, 250px);
+	}
+	.about__row-title {
+		color: #fff;
+		font-family: Inter;
+		font-size: clamp(16px, 1.9vw, 35px);
+		font-weight: 600;
+		line-height: clamp(20px, 2.1vw, 40px);
+		margin-bottom: clamp(20px, 2vw, 40px);
+	}
+	.about__row-description {
+		color: #fff;
+		font-family: Inter;
+		font-size: clamp(15px, 1.2vw, 20px);
+		font-weight: 400;
+		line-height: clamp(22px, 1.9vw, 35px);
+		padding-right: 15px;
+		@media (max-width: 1183px) {
+			padding-right: 0;
+		}
+		@media (max-width: 527px) {
+			br:not(.line-break) {
+				display: none;
+			}
+		}
+	}
+}
+.about__row-img {
+	position: relative;
+	width: clamp(410px, 50vw, 910px);
+	padding-top: clamp(50px, 7vw, 110px);
+	@media (max-width: 924px) {
+		margin-left: 25px;
+	}
+	@media (max-width: 390px) {
+		margin-left: 0;
+	}
+	.players {
+		position: absolute;
+		z-index: 1;
+		width: clamp(200px, 37.5vw, 720px);
+	}
+	.field {
+		position: absolute;
+		left: clamp(100px, 10vw, 190px);
+		top: clamp(40px, 4.5vw, 84px); //84
+		width: clamp(200px, 37.5vw, 720px);
+	}
+}
+.about-btn {
+	@media (max-width: 1083px) {
+		margin: 0 auto;
+		max-width: 128.6px;
+	}
+	a {
+		color: #fff;
+		font-family: Inter;
+		font-size: clamp(13px, 0.9vw, 18px);
+		font-weight: 600;
+		line-height: clamp(21px, 1.6vw, 30px);
+		padding: clamp(5px, 0.5vw, 10px) clamp(25px, 2.4vw, 42px);
+		background-color: #dc052d;
+		border-radius: clamp(15px, 1.8vw, 30px);
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+	}
+}
+@media (max-width: 346px) {
+	.about__row-img {
+		display: none;
+	}
+	.about__row {
+		margin-bottom: 15px;
+	}
+}

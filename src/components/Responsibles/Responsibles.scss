@@ -1,0 +1,123 @@
+.responsibles__container {
+  max-width: 1680px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.responsibles__title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 65px;
+}
+.responsibles__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.row__img  {
+padding-right: 15px;
+  img {
+    margin-top: 5px;
+  }
+  @media(max-width: 1609px){
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  @media (max-width : 775px) {display: none;}
+}
+.row__text {
+  color: #fff;
+  font-family: Inter;
+  font-size: clamp(16px, 1.9vw, 20px);
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0%;
+  text-align: left;
+  @media(max-width: 1609px){
+    text-align: center;
+    br:not(.line-break){ display:none}
+  }
+}
+
+.responsible__description {
+  margin-top: 60px;
+}
+.description__title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.description__description {
+  color: rgb(255, 255, 255);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-bottom: 50px;
+  @media(max-width: 1615px) {
+    br:not(.line-break) {
+      display: none;
+    }
+  }
+}
+.responsible__row-img__container {
+  max-width: 1650px;
+  margin: 0 auto;
+  @media(max-width : 1650px) {
+    max-width: 530px;
+  }
+  @media(max-width: 560px) {
+    max-width: 350px;
+  }
+}
+.responsible__row-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & :nth-child(2) {
+    padding: 0 15px;
+    @media(max-width : 1650px) {
+      padding: 20px 0;
+    }
+  }
+  @media(max-width: 560px) {
+    img {
+      width: 100%;
+    }
+  }
+}
+.responsible-btn {
+  max-width: 220px;
+  margin: 60px auto 0;
+  border-radius: 30px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  background: rgb(220, 5, 45);
+  a {
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0%;
+    padding: 10px 64px;
+  }
+}
+.responsible__last-text {
+  color: #fff;
+  font-family: Inter;
+  font-size: 35px;
+  font-size: clamp(25px, 2vw, 35px);
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 60px;
+}

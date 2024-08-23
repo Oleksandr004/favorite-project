@@ -1,0 +1,110 @@
+.quastion-section {
+	margin-top: 15px;
+}
+
+.quastion-section__container {
+	max-width: 1680px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.quastion-section__title {
+	br {
+		display: none;
+		@media (max-width: 579px) {
+			display: block;
+		}
+	}
+}
+
+.quastion-section__element {
+	cursor: pointer;
+	position: relative;
+	height: 50px;
+	@media (max-width: 579px) {
+		height: 80px;
+	}
+	width: 100%;
+	border: 1px solid rgb(255, 255, 255);
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+	p {
+		position: absolute;
+		color: rgb(255, 255, 255);
+		font-family: Inter;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 30px;
+		letter-spacing: 0%;
+		text-align: left;
+		top: 10px;
+		left: 20px;
+	}
+	svg {
+		position: absolute;
+		top: 12px;
+		right: 20px;
+		@media (max-width: 579px) {
+			top: 27px;
+			right: 20px;
+		}
+	}
+	span {
+		display: none;
+	}
+}
+.quastion-section__description {
+	display: block;
+	@media (max-width: 1618px) {
+		br:not(.line-break) {
+			display: none;
+		}
+	}
+}
+.active {
+	height: 250px;
+	@media (max-width: 1325px) {
+		height: 300px;
+	}
+	@media (max-width: 958px) {
+		height: 360px;
+	}
+	@media (max-width: 701px) {
+		height: 430px;
+	}
+	@media (max-width: 595px) {
+		height: 500px;
+	}
+	background: rgba(61, 0, 18, 0.6);
+	transition: all 0.4s;
+	svg {
+		transform: rotate(90deg);
+	}
+	span {
+		display: block;
+		position: absolute;
+		top: 55px;
+		left: 20px;
+		color: #fff;
+		font-family: Inter;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+}
+.active {
+	background: rgba(61, 0, 18, 0.6);
+	transition: all 0.4s;
+	svg {
+		transform: rotate(90deg);
+	}
+	span {
+		display: block;
+		position: absolute;
+		top: 55px;
+		left: 20px;
+		color: #fff;
+		font-family: Inter;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+}
