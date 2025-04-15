@@ -1,5 +1,5 @@
-import '../../ReuseComponent/HomeBtn/HomeBtn'
-import { HomeBtn } from '../../ReuseComponent/HomeBtn/HomeBtn'
+// import '../../ReuseComponent/HomeBtn/HomeBtn'
+// import { HomeBtn } from '../../ReuseComponent/HomeBtn/HomeBtn'
 import '../SignUpForm/SignUpForm.scss'
 import { useForm } from 'react-hook-form'
 import { useState, useEffect } from 'react'
@@ -35,7 +35,7 @@ export function SignUpForm() {
 	return (
 		<>
 			<div className='signup-container'>
-				<HomeBtn />
+				{/* <HomeBtn /> */}
 				<div className='signup-form__container'>
 					<h4 className='signup-form__title'>SIGN UP</h4>
 					<img
