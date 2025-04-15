@@ -1,7 +1,7 @@
 import '../LoginForm/LoginForrm.scss'
 import { useForm } from 'react-hook-form'
-import '../../ReuseComponent/HomeBtn/HomeBtn'
-import { HomeBtn } from '../../ReuseComponent/HomeBtn/HomeBtn'
+// import '../../ReuseComponent/HomeBtn/HomeBtn'
+// import { HomeBtn } from '../../ReuseComponent/HomeBtn/HomeBtn'
 import { useState, useEffect } from 'react'
 
 export function LoginForm() {
@@ -41,7 +41,7 @@ export function LoginForm() {
 	return (
 		<>
 			<div className='login-page__container'>
-				<HomeBtn />
+				{/* <HomeBtn /> */}
 				<section className='login-form'>
 					<div className='login-form__container'>
 						<h4 className='login-form__title'>LOGIN</h4>
