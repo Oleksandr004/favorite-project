@@ -1,165 +1,175 @@
 $max-width: calc(1920px - 135px - 105px);
 .header__bg {
-  position: absolute;
-  width: 100%;
+	position: absolute;
+	width: 100%;
 }
 .header {
-  z-index: 999;
-  padding: 0 15px;
-  padding-top: clamp(15px, 2.1vw, 40px);
-  position: relative;
-  .header__container {
-    max-width: $max-width;
-    margin: 0 auto;
-  }
+	z-index: 999;
+	padding: 0 15px;
+	padding-top: clamp(15px, 2.1vw, 40px);
+	position: relative;
+	.header__container {
+		max-width: $max-width;
+		margin: 0 auto;
+	}
 }
 
 .header__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .header__nav {
-  display: flex;
-  gap: clamp(20px, 3vw, 60px);
-  align-items: center;
-  .header__nav-list {
-    display: flex;
-    gap: clamp(20px, 2.3vw, 40px);
-    .header__nav-link {
-      color: rgb(255, 255, 255);
-      font-family: "Inter";
-      font-size: clamp(1rem, 1vw, 18px);
-      font-weight: 600;
-      line-height: clamp(10px, 1.5vw, 30px);
-      letter-spacing: 0%;
-    }
-  }
+	display: flex;
+	gap: clamp(20px, 3vw, 60px);
+	align-items: center;
+	.header__nav-list {
+		display: flex;
+		gap: clamp(20px, 2.3vw, 40px);
+		.header__nav-link {
+			color: rgb(255, 255, 255);
+			font-family: 'Inter';
+			font-size: clamp(1rem, 1vw, 18px);
+			font-weight: 600;
+			line-height: clamp(10px, 1.5vw, 30px);
+			letter-spacing: 0%;
+		}
+	}
 }
 .header__nav-btns {
-  display: flex;
-  gap: clamp(10px, 1vw, 20px);
-  .header__nav-btn {
-    color: rgb(255, 255, 255);
-    font-family: "Inter";
-    font-size: clamp(1rem, 1vw, 18px);
-    font-weight: 600;
-    line-height: clamp(10px, 1.5vw, 30px);
-    letter-spacing: 0%;
-  }
-  .login {
-    padding: clamp(5px, 0.5vw, 10px) clamp(25px, 1.9vw, 37px);
-    background-color: #dc052d;
-    border-radius: 30px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-    max-height: 50px;
-  }
-  .sign {
-    padding: clamp(5px, 0.5vw, 10px) clamp(15px, 1.5vw, 28px);
-    background-color: #0066b2;
-    border-radius: 30px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-    max-height: 50px;
-    max-height: 50px;
-  }
+	display: flex;
+	gap: clamp(10px, 1vw, 20px);
+	.header__nav-btn {
+		color: rgb(255, 255, 255);
+		font-family: 'Inter';
+		font-size: clamp(1rem, 1vw, 18px);
+		font-weight: 600;
+		line-height: clamp(10px, 1.5vw, 30px);
+		letter-spacing: 0%;
+	}
+	.login {
+		padding: clamp(5px, 0.5vw, 10px) clamp(25px, 1.9vw, 37px);
+		background-color: #dc052d;
+		border-radius: 30px;
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+		max-height: 50px;
+	}
+	.sign {
+		padding: clamp(5px, 0.5vw, 10px) clamp(15px, 1.5vw, 28px);
+		background-color: #0066b2;
+		border-radius: 30px;
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+		max-height: 50px;
+		max-height: 50px;
+	}
 }
 .header__burger-menu {
-  cursor: pointer;
-  position: relative;
-  height: 20px;
-  width: 30px;
-  span {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-  }
+	cursor: pointer;
+	position: relative;
+	height: 20px;
+	width: 30px;
+	span {
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+	}
 }
 .header__burger-menu :first-child {
-  margin-top: 0;
+	margin-top: 0;
 }
 .header__burger-menu :nth-child(2) {
-  margin-top: 9px;
+	margin-top: 9px;
 }
 .header__burger-menu :last-child {
-  bottom: 0;
+	bottom: 0;
 }
 .header__row-logo {
-  display: block;
-  width: clamp(50px, 6.9vw, 130px);
+	display: block;
+	width: clamp(50px, 6.9vw, 130px);
 }
 
 .header__burger-menu-active {
-  overflow: hidden;
+	overflow: hidden;
 }
 .header__burger-menu-active :first-child {
-  top: 9px;
-  transform: rotate(45deg);
-  transition: all 0.2s;
+	top: 9px;
+	transform: rotate(45deg);
+	transition: all 0.2s;
 }
 .header__burger-menu-active :nth-child(2) {
-  transform: scale(0);
-  transition: all 0.2s;
+	transform: scale(0);
+	transition: all 0.2s;
 }
 .header__burger-menu-active :last-child {
-  bottom: 9px;
-  transform: rotate(-45deg);
-  transition: all 0.2s;
+	bottom: 9px;
+	transform: rotate(-45deg);
+	transition: all 0.2s;
 }
-.header__burger-menu{
-  display: none;
+.header__burger-menu {
+	display: none;
 }
 @media (max-width: 761px) {
-  .header__row-logo {
-    display: none;
-  }
-  .header__nav-list{
-    display: none;
-  }
-  .header__nav-btns{
-    display: none;
-  }
-  .header__nav{
-    display: none;
-  }
-  .header__burger-menu {
-    display: block;
-  }
-  .header__row{
-    justify-content: end;
-  }
+	.header__row-logo {
+		display: none;
+	}
+	.header__nav-list {
+		display: none;
+	}
+	.header__nav-btns {
+		display: none;
+		// margin: 0;
+	}
+	.header__nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// flex-wrap: wrap;
+		gap: 0;
+	}
+	.header__burger-menu {
+		display: block;
+	}
+	.header__row {
+		justify-content: end;
+	}
 }
 .header-active {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background: url(/public/Background.png);
-  .header__nav-list{
-    display: block;
-    z-index: 222;
-  }
-  .header__nav{
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .header__nav-list{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-  .header__nav-btns{
-    // display: block;
-    z-index: 222;
-  }
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background: url(/public/Background.png);
+	.header__nav-list {
+		display: block;
+		z-index: 222;
+	}
+	.header__nav {
+		display: flex;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.header__nav-list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		text-align: center;
+	}
+	.header__nav-btns {
+		display: flex;
+		flex-wrap: wrap;
+		// position: absolute;
+
+		max-width: 87px;
+		// margin: 200px auto 0;
+		margin-top: 25px;
+	}
 }
 
-.unscroll{
-  overflow: hidden;
+.unscroll {
+	overflow: hidden;
 }
