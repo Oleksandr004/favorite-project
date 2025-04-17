@@ -8,6 +8,7 @@ export function ContactsInfo() {
 		formState: { errors },
 		handleSubmit,
 		reset,
+		setError,
 	} = useForm({
 		mode: 'onChange',
 	})
@@ -29,7 +30,14 @@ export function ContactsInfo() {
 		setCode(generateRandomCode())
 	}, [])
 	const onSubmit = (data) => {
-		alert(JSON.stringify(data))
+		if (data.userCode !== code) {
+			setError('userCode', {
+				type: 'manual',
+				message: 'Incorrect code',
+			})
+			return
+		}
+		alert('Form submitted successfully!')
 		reset()
 	}
 
@@ -149,9 +157,14 @@ export function ContactsInfo() {
 									Enter Code<span>*</span>:
 									<input
 										className='input__code'
-										{...register('userCode', {})}
+										{...register('userCode', {
+											required: 'Required field',
+										})}
 									/>
 									<div className='input__code-text'>{code}</div>
+									{errors?.userCode && (
+										<p style={{ color: 'red' }}>{errors.userCode.message}</p>
+									)}
 								</label>
 								<button className='form__send-btn' type='submit'>
 									SEND MESSAGE

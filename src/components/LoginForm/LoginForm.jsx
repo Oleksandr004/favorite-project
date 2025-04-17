@@ -1,23 +1,26 @@
 import '../LoginForm/LoginForrm.scss'
 import { useForm } from 'react-hook-form'
-// import '../../ReuseComponent/HomeBtn/HomeBtn'
-// import { HomeBtn } from '../../ReuseComponent/HomeBtn/HomeBtn'
 import { useState, useEffect } from 'react'
+import HomeBtn from '../../ReuseComponent/HomeBtn/HomeBtn'
 
 export function LoginForm() {
 	const {
 		register,
 		reset,
-		getValues,
 		handleSubmit,
 		formState: { errors },
+		setError,
 	} = useForm({ mode: 'onChange' })
 
 	const onSubmit = (data) => {
-		if (getValues('UserCode') !== code) {
-			alert('Invalid code')
+		if (data.UserCode !== code) {
+			setError('UserCode', {
+				type: 'manual',
+				message: 'invalid code',
+			})
+			return
 		}
-		alert(JSON.stringify(data))
+		alert('Login successfully!')
 		reset()
 	}
 
@@ -41,15 +44,10 @@ export function LoginForm() {
 	return (
 		<>
 			<div className='login-page__container'>
-				{/* <HomeBtn /> */}
+				<HomeBtn />
 				<section className='login-form'>
 					<div className='login-form__container'>
 						<h4 className='login-form__title'>LOGIN</h4>
-						<img
-							className='login-form__bg'
-							src='/logo-login-page-bg.png'
-							alt=''
-						/>
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<label>
 								Login:

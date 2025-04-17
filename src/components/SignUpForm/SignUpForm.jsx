@@ -1,5 +1,4 @@
-// import '../../ReuseComponent/HomeBtn/HomeBtn'
-// import { HomeBtn } from '../../ReuseComponent/HomeBtn/HomeBtn'
+import HomeBtn from '../../ReuseComponent/HomeBtn/HomeBtn'
 import '../SignUpForm/SignUpForm.scss'
 import { useForm } from 'react-hook-form'
 import { useState, useEffect } from 'react'
@@ -9,10 +8,22 @@ export function SignUpForm() {
 		reset,
 		handleSubmit,
 		formState: { errors },
+		setError,
+		watch,
 	} = useForm({ mode: 'onChange' })
+
+	const password = watch('userPass')
 
 	const onSubmit = (data) => {
 		alert(JSON.stringify(data))
+		if (data.userCode !== code) {
+			setError('userCode', {
+				type: 'manual',
+				message: 'invalid code',
+			})
+			return
+		}
+		alert('Sign up successfully')
 		reset()
 	}
 
@@ -34,15 +45,11 @@ export function SignUpForm() {
 	}, [])
 	return (
 		<>
-			<div className='signup-container'>
-				{/* <HomeBtn /> */}
+			<div className='signup_container'>
+				<HomeBtn />
 				<div className='signup-form__container'>
 					<h4 className='signup-form__title'>SIGN UP</h4>
-					<img
-						className='signup-form__bg'
-						src='/logo-login-page-bg.png'
-						alt=''
-					/>
+
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<label>
 							Login:
@@ -82,6 +89,7 @@ export function SignUpForm() {
 						<label>
 							Password:
 							<input
+								type='password'
 								{...register('userPass', {
 									required: 'Required field',
 									minLength: {
@@ -101,14 +109,17 @@ export function SignUpForm() {
 						<label>
 							Retype Password:
 							<input
+								type='password'
 								{...register('userPassRetype', {
 									required: 'Required field',
+									validate: (value) =>
+										value === password || 'Passwords do not match',
 								})}
 							/>
 							<div>
 								{errors?.userPassRetype && (
 									<p style={{ color: 'red', position: 'absolute' }}>
-										{errors?.userPassRetype?.message || 'erorr'}
+										{errors?.userPassRetype?.message}
 									</p>
 								)}
 							</div>
@@ -128,8 +139,25 @@ export function SignUpForm() {
 							</div>
 						</label>
 						<div className='signup-form__agrees'>
-							<input type='radio' />
+							<input
+								type='radio'
+								value={true}
+								{...register('terms', {
+									required: 'You must agree to continue',
+								})}
+							/>
 							<a href='#!'>I agree with Terms and conditions</a>
+							{errors.terms && (
+								<p
+									style={{
+										color: 'red',
+										position: 'absolute',
+										marginTop: '40px',
+									}}
+								>
+									{errors.terms.message}
+								</p>
+							)}
 						</div>
 						<button className='signup-form__btn' type='submit'>
 							SIGN UP
