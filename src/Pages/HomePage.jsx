@@ -8,13 +8,11 @@ import { Roadmap } from '../components/Roadmap/Roadmap'
 import { News } from '../components/News/News'
 import { Partners } from '../components/Partners/Partners'
 import { Footer } from '../ReuseComponent/Footer/Footer'
-// import { Social } from "../components/ReuseComponent/Social";
 export default function HomePage() {
 	return (
 		<>
 			<img className='header__bg' src='/start-background.png' alt='' />
 			<Header />
-			{/* <Social nameClass={"social__home-page"} /> */}
 			<Home />
 			<TokensPurchased />
 			<Economics />
