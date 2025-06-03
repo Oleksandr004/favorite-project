@@ -6,7 +6,6 @@ This is a responsive multipage website built for buying football club fan tokens
 
 ![Adaptive website Demo](https://i.ibb.co/wsZDB7d/favorite-project.png)
 
-## Функціонал
 
 ## Features
 
